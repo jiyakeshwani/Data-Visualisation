@@ -28,120 +28,161 @@ Start development server
 npm run dev
 
 ```
+---
+✅ Features Implemented
 
-Features Implemented
+1. 🧭 Dashboard Screen
+A multi-layered interface broken into modular components:
 
-1:Dashboard Screen
-The Dashboard screen includes a multi-layered interface broken into the following components:
+Sidebar (Left-aligned):
 
-Sidebar (Left-aligned)
-A vertical sidebar with icons, providing quick navigation or future module access.
+Vertical icon-based navigation for quick access and future expansion.
 
-Top Navigation Bar
-Contains:
-A search bar for quick access
-A module selector with options like:
+Top Navigation Bar:
+
+Search bar for instant lookups
+
+Module selector with options:
+
 Charging Station
+
 Parking
+
 Fleet Sizing
 
-Active Module Window
-Displays content based on the selected module:
-Shows the Best Scenarios for that module
-Includes a graph/visualization area
-Lists the currently active/selected variables
+Active Module Window:
 
-Graph Visualization
-Graph renders data points based on selected variables
-Hovering on a data point reveals the Details Card with contextual info
-Smooth fade-in animation for hover interaction
+Displays:
 
-Key Performance Indicators/Variables Panel
-Helps users understand which parameters are affecting the graph
+Best Scenarios for the selected module
 
+Interactive graph/visualization
 
-2: Edit Variables – Slide-Over Panel Functionality
-The Edit Variables Panel is an interactive, right-side slide-over card that allows users to explore and modify variables influencing the graph.
+Active/selected variables list
 
-Features of the Edit Panel
+Graph Visualization:
 
-Search Input
-Positioned at the top for real-time filtering of variables by name.
-Case-insensitive search for smooth UX.
-Category-wise Variable Listing
-Variables are grouped and rendered by their category.
-Each variable displays a selectable chip-like UI to toggle selection.
-Hover Interaction for Contextual Details
-On hover (1.5 seconds delay) over any variable:
-A contextual window appears below showing:
-The variable's name
-Its description
-An Edit button to modify it
+Plots data based on selected variables
 
-Edit Functionality
-On clicking the Edit button:
-A form opens inline, allowing the user to:
-Edit monthly cost values
-Update description
-Change the category
-Toggle selected state
+Hovering on points reveals a Details Card
 
+Smooth fade-in animations on hover
 
-3: Graph & Performance Integration
-Selected Variables:
-Appear in the main Graph dropdown
-Data points is visualized of selected dropdown item
-The first four selected variables are also displayed as performance indicators
+Key Performance Indicators Panel:
 
+Shows key metrics affected by selected variables
 
-4: Authentication
-Firebase-based login (Email/Password and Google OAuth).
+2. ✏️ Edit Variables — Slide-Over Panel
+An interactive right-side panel that enables real-time variable configuration.
 
+Key Functionalities:
+Search Input:
 
-Tech Stack
-React 18 + Vite
-TypeScript
-Redux Toolkit (state management)
-React Router DOM (navigation)
-Tailwind CSS (UI styling)
-Firebase Authentication (login)
-Lucide React Icons (icons)
-MagicUi (for those little UI enhancements)
+Top-positioned, case-insensitive filtering
 
+Category-wise Listing:
 
+Variables grouped by category
 
-Technical Decisions & Trade-offs
-Used Vite for fast build
-Redux Toolkit	For global variable and module state syncing
-Tailwind CSS	Rapid UI development with design accuracy
-Custom form state	Local state within form until saved avoids partial/incomplete updates
-Firebase Auth	Quick, secure setup with built-in providers
+Chip-style toggle UI for selection
 
+Hover Interaction (1.5s delay):
 
-Known Limitations
-Data is not persisted to a backend (stored only in Redux store).
-No unit or integration tests because edge case scenario is minimal due to dummy data.
-Validation is basic and assumes correct usage.
-error and loading states are minimal since dummy data is used
+Contextual popup showing:
 
+Variable name
 
-Time Spent
-Requirement Gathering and understanding: 1hr
-High level data and user flow design: 1hr
-Firebase Auth Setup: 1 hr
-Redux & Types Setup: 30min
-Dashboard + Graph + Variables Panel: 2 hrs
-Slide-Over Edit Panel: 1hrs
-Edit Variable Form + Cost Handling + State Sync: 1hrs
-Hover Card Interaction: 30min
-Code refactoring and documentation: 45min;
-Total: 9 hours
+Description
 
+Edit button
 
-Final Notes
-All interactions follow Figma’s UX guidance.
-Product Level user flow may have a slight difference since figma was very unclear.
-UI and interactions are optimized for clarity, speed, and responsiveness.
+Edit Flow:
+
+Inline form with:
+
+Monthly cost inputs
+
+Description update
+
+Category selection
+
+Selection toggle
+
+3. 📊 Graph & Performance Integration
+Selected variables:
+
+Appear in the graph dropdown
+
+First four also shown as KPIs
+
+Visualization:
+
+Dynamic updates on variable selection
+
+Smooth, responsive UI interaction
+
+4. 🔐 Authentication
+Firebase authentication via:
+
+Email/Password
+
+Google OAuth
+
+🛠 Tech Stack
+Framework: React 18 + Vite
+
+Language: TypeScript
+
+State Management: Redux Toolkit
+
+Routing: React Router DOM
+
+Styling: Tailwind CSS
+
+Auth: Firebase Authentication
+
+Icons: Lucide React
+
+Enhancements: MagicUI (micro-interactions)
+
+🧠 Technical Decisions & Trade-offs
+Decision	Reasoning
+Vite	Fast dev server & optimized build times
+Redux Toolkit	Global syncing of variables & module state
+Tailwind CSS	Rapid UI development with precision from Figma
+Local Form State	Prevents partial updates until confirmed
+Firebase Auth	Quick, secure setup with built-in OAuth options
+
+⚠️ Known Limitations
+No persistent backend (data lives in Redux store)
+
+Minimal form validation
+
+No unit/integration tests (low complexity due to dummy data)
+
+Basic error/loading state handling
+
+⏱️ Time Spent
+Task	Time Spent
+Requirement gathering & understanding	1 hr
+High-level data & user flow design	1 hr
+Firebase Auth setup	1 hr
+Redux & Types setup	30 min
+Dashboard + Graph + Variable Panel	2 hrs
+Slide-Over Edit Panel	1 hr
+Edit Variable Form & State Syncing	1 hr
+Hover Card Interaction	30 min
+Code refactoring & documentation	45 min
+Total	9 hrs
+
+📝 Final Notes
+All interactions follow Figma’s UX guidelines
+
+Slight variations may exist due to gaps in Figma specs
+
+UI is optimized for clarity, performance, and responsiveness
+
 
 Built with ❤️ by Jiya!
+
 Looking forward to hear back!
